@@ -14,7 +14,6 @@ public:
     ~Rectangle();
 
 private:
-    //void paint(QPainter *painter) override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override;
 
 };
