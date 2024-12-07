@@ -35,7 +35,7 @@ void MyScene::setDeleteMode(bool mode) {
     deleteMode = mode;
 }
 
-void MyScene::onShapePositionChanged(QPointF newPosition) {
+void MyScene::onShapePositionChanged() {
     shape *changedShape = dynamic_cast<shape*>(sender());
     if (changedShape) {
         updateLinesForShape(changedShape);
