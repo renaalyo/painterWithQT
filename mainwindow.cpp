@@ -59,9 +59,6 @@ void MainWindow::on_pushButtonLine_clicked()
 
 void MainWindow::on_pushButtonMove_clicked()
 {
-    // QPointF mousePos = view->mapToScene(view->mapFromGlobal(QCursor::pos()));
-    // scene->setMoveMode(true); // Включаем режим перемещения
-    // emit scene->moveShapeToPos(mousePos);
     scene->setMoveMode(true);
     scene->setDeleteMode(false);
 }
