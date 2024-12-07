@@ -21,8 +21,6 @@ public:
     void setEndLine(shape *endLine);
 
     //added
-    // shape* startShape() const;
-    // shape* endShape() const;
     shape* getStartLine() const;
     shape* getEndLine() const;
     void updatePosition();
