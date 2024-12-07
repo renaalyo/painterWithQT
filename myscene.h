@@ -75,7 +75,7 @@ protected:
 
     void drawForeground(QPainter *painter, const QRectF &rect) override;
 public slots:
-    void onShapePositionChanged(QPointF newPosition);
+    void onShapePositionChanged();
 };
 
 #endif // MYSCENE_H
