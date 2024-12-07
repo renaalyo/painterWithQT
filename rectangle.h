@@ -11,7 +11,6 @@ class Rectangle : public shape
 
 public:
     Rectangle(QPointF point, QGraphicsObject *parent = nullptr);
-    ~Rectangle();
 
 private:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override;
