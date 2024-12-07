@@ -162,16 +162,6 @@ void MyScene::mousePressEvent(QGraphicsSceneMouseEvent *event){
 };
 
 void MyScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event){
-    // if (event->button() == Qt::LeftButton && !paintingCancelling) {
-    //     tempShape = nullptr;
-    // } else if (paintingCancelling) {
-    //     if (tempShape) {
-    //         this->removeItem(tempShape);
-    //         delete tempShape;
-    //         tempShape = nullptr;
-    //     }
-    //     paintingCancelling = false;
-    // }
 
     if (event->button() == Qt::LeftButton) {
         if (moveMode && draggedShape) {
@@ -231,10 +221,6 @@ void MyScene::drawForeground(QPainter *painter, const QRectF &rect)
         line->paint(painter);
     }
 
-    // for (const QPixmap &pixmap : pixmapLayers) {
-    //     painter->drawPixmap(0, 0, pixmap);
-    // }
-
     if (!pixmap.isNull()) {
         painter->drawPixmap(0, 0, pixmap);
     }
@@ -245,8 +231,6 @@ void MyScene::updateLinesForShape(shape *shape) {
     QList<Line*> lines = shapeToLinesHash.value(shape);
     for (Line *line : lines) {
         line->updatePosition();
-
-        //this->update(line->boundingRect());
     }
 }
 
@@ -264,11 +248,7 @@ void MyScene::saveToFile(const QString &fileName)
 
 void MyScene::loadFromFile(const QString &fileName)
 {
-    // QPixmap pixmap(fileName);
-    // if (pixmap.isNull())
-    //     return;
 
-    // pixmapLayers.append(pixmap);
     QPixmap newPixmap(fileName);
     if (newPixmap.isNull())
         return;
