@@ -2,8 +2,6 @@
 
 Rectangle::Rectangle(QPointF point, QGraphicsObject *parent) : shape(point, parent){};
 
-Rectangle::~Rectangle(){};
-
 void Rectangle::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){
     painter->setPen(QPen(Qt::white, 2));
 
