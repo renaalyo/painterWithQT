@@ -8,8 +8,6 @@ shape::shape(QPointF point, QGraphicsObject *parent) :
     this->setEndPoint(mapFromScene(point));
 }
 
-//shape::~shape(){}
-
 QRectF shape::boundingRect() const{
     return QRectF(f_startPoint, f_endPoint).normalized();
 }
@@ -46,14 +44,6 @@ void shape::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     }
 }
 
-// void shape::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
-//     if (isDragging && event->buttons() & Qt::LeftButton) {
-//         QPointF delta = event->scenePos() - dragStartPos;
-//         moveBy(delta.x(), delta.y());
-//         dragStartPos = event->scenePos();
-//         emit positionChanged();
-//     }
-// }
 
 void shape::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
     MyScene *scene = dynamic_cast<MyScene*>(this->scene());
