@@ -55,7 +55,6 @@ private:
     //for loading images
     QPixmap pixmap;
 
-    //QList<QPixmap> pixmapLayers;
     // //added
     QList <shape*> shapes;
     QHash<shape*, QList<Line*>> shapeToLinesHash;
